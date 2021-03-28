@@ -74,34 +74,34 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Hellow`*{}* [🤗](https://telegra.ph/file/2e147376a5953bbd6cf3c.jpg) `My name is`Hellow`*{}* [🤗](https://telegra.ph/file/2e147376a5953bbd6cf3c.jpg) `My name is` *𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*
+`Hellow My name is` *Masha*
 `I'm here to help you manage your groups! Hit` *📚Commands* `button below to find out more about how to use me to my full potential.` 
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="♐ADD 𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉 TO YOUR GROUP♐", url="t.me/The_Princess2_Bot?startgroup=true"),
+            text="➕️ ADD MASHA TO YOUR GROUP ➕️", url="t.me/MashaRoBot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="𓊈𒆜🚶BOUT🚶𒆜𓊉?", callback_data="masha_"),
-        InlineKeyboardButton(text="𓊈𒆜🚶COMMANDS🚶S𒆜𓊉, callback_data="help_back"),
+        InlineKeyboardButton(text="ℹ️ ABOUT", callback_data="masha_"),
+        InlineKeyboardButton(text="📚 COMMANDS", callback_data="help_back"),
     ],
     [
         InlineKeyboardButton(
-            text="𓊈𒆜🚶SAURCE🚶𒆜𓊉", callback_data="source_"),
+            text="💾 SOURCE", callback_data="source_"),
         InlineKeyboardButton(
-            text="𓊈𒆜🚶UPPORTT🚶𒆜𓊉", url="https://t.me/PRINCESS_SUPPORT"
+            text="👥 SUPPORT", url="https://t.me/wastebots"
         ),
     ],
 ]
 
 
 HELP_STRINGS = """
-*╔═════ ▓▓ HELP BUTTONS ▓▓ ═════╗*"""
+*『HELP BUTTONS HERE』*"""
 
 
-DONATE_STRING = """🖤oo need.. I'm rich Just Want To Support🖤"""
+DONATE_STRING = """No need.. I'm rich"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -186,7 +186,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="BACK", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="⬅️ BACK", callback_data="help_back")]]
                     ),
                 )
 
@@ -290,7 +290,7 @@ def help_button(update, context):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "●▬▬๑✺۩❰❰HELP FOR *{}* ❱❱۩✺๑▬▬●:\n".format(
+                "「 *HELP FOR* *{}* 」:\n".format(
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
@@ -300,7 +300,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="●▬⛹️❰❰GO BACK ❱❱🚶▬●", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="「 GO BACK 」", callback_data="help_back")]]
                 ),
             )
 
@@ -346,16 +346,16 @@ def Masha_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "masha_":
         query.message.edit_text(
-            text=""" ༆ Hey ⚡I'm * 𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*,A powerful group management bot built to help you manage your group easily.
-                 \n💫➠ I can restrict users.
-                 \n💫➠ I can greet users with customizable welcome messages and even set a group's rules.
-                 \n💫➠ I have an advanced anti-flood system.
-                 \n💫➠ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
-                 \n💫➠I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
-                 \n💫➠ I check for admins' permissions before executing any command and more stuffs
-                 \n\n_𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂's licensed under the GNU General Public License v3.0_
-                 \nHere is the [💾𝚂𝙰𝚄𝚁𝙲𝙴➪](https://t.me/PRINCESS_SUPPORT).
-                 \n\nIf you have any question about PRINCESS, let us know at @PRINCESS_SUPPORT """,
+            text=""" ℹ️ I'm *MASHA*, a powerful group management bot built to help you manage your group easily.
+                 ❍ I can restrict users.
+                 ❍ I can greet users with customizable welcome messages and even set a group's rules.
+                 ❍ I have an advanced anti-flood system.
+                 ❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
+                 ❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
+                 ❍ I check for admins' permissions before executing any command and more stuffs
+                 \n_Masha's licensed under the GNU General Public License v3.0_
+                 Here is the [💾Repository](https://github.com/Mr-Dark-Prince/MashaRoBot).
+                 If you have any question about Masha, let us know at @WasteBots.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -381,8 +381,8 @@ def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..🤗 I'm * 𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*
-                 \nHere is the [💫My Founder💫](https://t.me/Mr_Purushottam_M) .""",
+            text=""" Hi..🤗 I'm *MASHA*
+                 \nHere is the [Source Code](https://github.com/Mr-Dark-Prince/MashaRoBot) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
@@ -445,7 +445,7 @@ def get_help(update: Update, context: CallbackContext):
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
         text = (
-            "●▬▬๑✺۩❰❰HELP FOR *{}* ❱❱๑۩✺๑▬▬● :\n".format(
+            "Here is the available help for the *{}* module:\n".format(
                 HELPABLE[module].__mod_name__
             )
             + HELPABLE[module].__help__
