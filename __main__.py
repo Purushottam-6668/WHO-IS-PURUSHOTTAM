@@ -187,7 +187,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="⬅️ BACK", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="❲❯❯⛹️GO BACK⛹️ ❮❮❳", callback_data="help_back")]]
                     ),
                 )
 
@@ -291,7 +291,7 @@ def help_button(update, context):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "「 *HELP FOR* *{}* 」:\n".format(
+                "◆▬▬❯❯INFO FOR *{}*❮❮▬▬◆:\n".format(
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
@@ -301,7 +301,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="「 GO BACK 」", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="◆▬▬❯❯GO⛹️BACK❮❮▬▬◆", callback_data="help_back")]]
                 ),
             )
 
@@ -347,22 +347,22 @@ def Masha_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "masha_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *MASHA*, a powerful group management bot built to help you manage your group easily.
-                 ❍ I can restrict users.
-                 ❍ I can greet users with customizable welcome messages and even set a group's rules.
-                 ❍ I have an advanced anti-flood system.
-                 ❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
-                 ❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
-                 ❍ I check for admins' permissions before executing any command and more stuffs
-                 \n_Masha's licensed under the GNU General Public License v3.0_
-                 Here is the [💾Repository](https://github.com/Mr-Dark-Prince/MashaRoBot).
-                 If you have any question about Masha, let us know at @WasteBots.""",
+            text=""" _Hello I Am [*𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*](https://media.giphy.com/media/w5MSivCJcmHEQ/giphy.gif) a powerful group management bot built to help you manage your group easily.
+                 ❍➠ I can restrict users.
+                 ❍➠ I can greet users with customizable welcome messages and even set a group's rules.
+                 ❍➠ I have an advanced anti-flood system.
+                 ❍➠ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
+                 ❍➠ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
+                 ❍➠ I check for admins' permissions before executing any command and more stuffs
+                 \n_𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉's licensed under the GNU General Public License v3.0_
+                 Here is the [❲❯❯DEV-INFO❮❮❳](https://t.me/Mr_Purushottam_M).
+                 If you have any question about 𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉, let us know at @PRINCESS_SUPPORT.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Back", callback_data="masha_back")
+                    InlineKeyboardButton(text="❲❯❯⛹️BACK⛹️ ❮❮❳", callback_data="masha_back")
                  ]
                 ]
             ),
@@ -382,14 +382,14 @@ def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..🤗 I'm *MASHA*
-                 \nHere is the [Source Code](https://github.com/Mr-Dark-Prince/MashaRoBot) .""",
+            text=""" Hi..🤗 I'm *𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*
+                 \nHere is the [❲❯❯SAURCE CODE❮❮❳](https://github.com/Mr-Dark-Prince/MashaRoBot) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="source_back")
+                    InlineKeyboardButton(text="❲❯❯⛹️BACK⛹️❮❮❳", callback_data="source_back")
                  ]
                 ]
             ),
@@ -418,7 +418,7 @@ def get_help(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Help",
+                                text="◆▬❯❯HELP❮❮▬◆",
                                 url="t.me/{}?start=ghelp_{}".format(
                                     context.bot.username, module
                                 ),
@@ -434,7 +434,7 @@ def get_help(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Help",
+                            text="◆▬❯❯HELP❮❮▬◆",
                             url="t.me/{}?start=help".format(context.bot.username),
                         )
                     ]
@@ -446,7 +446,7 @@ def get_help(update: Update, context: CallbackContext):
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
         text = (
-            "Here is the available help for the *{}* module:\n".format(
+            "◆▬▬❯❯INFO FOR *{}* Module❮❮▬▬◆:\n".format(
                 HELPABLE[module].__mod_name__
             )
             + HELPABLE[module].__help__
@@ -455,7 +455,7 @@ def get_help(update: Update, context: CallbackContext):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
+                [[InlineKeyboardButton(text=" ❲❯❯⛹️BACK⛹️❮❮❳", callback_data="help_back")]]
             ),
         )
 
@@ -528,7 +528,7 @@ def settings_button(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Back",
+                                text="❲❯❯⛹️BACK⛹️❮❮❳",
                                 callback_data="stngs_back({})".format(chat_id),
                             )
                         ]
@@ -541,8 +541,8 @@ def settings_button(update: Update, context: CallbackContext):
             curr_page = int(prev_match.group(2))
             chat = bot.get_chat(chat_id)
             query.message.reply_text(
-                "Hi there! There are quite a few settings for {} - go ahead and pick what "
-                "you're interested in.".format(chat.title),
+                "❯❯Hi there! There are quite a few settings for {} - go ahead and pick what "
+                "you're interested in ❮❮.".format(chat.title),
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(
                         curr_page - 1, CHAT_SETTINGS, "stngs", chat=chat_id
@@ -604,7 +604,7 @@ def get_settings(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Settings",
+                                text="❲❯❯🛠️SETTINGS🛠️❮❮❳",
                                 url="t.me/{}?start=stngs_{}".format(
                                     context.bot.username, chat.id
                                 ),
@@ -630,7 +630,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 254318997 and DONATION_LINK:
+        if OWNER_ID != 1711642802 and DONATION_LINK:
             update.effective_message.reply_text(
                 "You can also donate to the person currently running me "
                 "[here]({})".format(DONATION_LINK),
@@ -647,11 +647,11 @@ def donate(update: Update, context: CallbackContext):
             )
 
             update.effective_message.reply_text(
-                "I've PM'ed you about donating to my creator!"
+                "🤗I've PM'ed you about donating to my creator!"
             )
         except Unauthorized:
             update.effective_message.reply_text(
-                "Contact me in PM first to get donation information."
+                "🤗Contact me in PM first to get donation information."
             )
 
 
@@ -678,7 +678,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Yes I'm alive 😹")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Hey *{first}* Yes I'm alive 😹")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
