@@ -74,34 +74,35 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Hellow My name is` *Masha*
-`I'm here to help you manage your groups! Hit` *📚Commands* `button below to find out more about how to use me to my full potential.` 
+༆_Hello ! i am_[*𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*](https://media.giphy.com/media/w5msivcjcmheq/giphy.gif)
+`*I'm here to help you manage your groups! Hit*` *❲❯❯HELP❮❮❳* `_button below to find out more about how to use me to my all available Commands_` 
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ADD MASHA TO YOUR GROUP ➕️", url="t.me/MashaRoBot?startgroup=true"),
+            text="❲❯❯ADD ME TO YOUR GROUP❮❮❳", url="t.me/{}?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="ℹ️ ABOUT", callback_data="masha_"),
-        InlineKeyboardButton(text="📚 COMMANDS", callback_data="help_back"),
+        InlineKeyboardButton(text="❲❯❯ABOUT❮❮❳", callback_data="masha_"),
+        InlineKeyboardButton(text="❲❯❯HELP❮❮❳", callback_data="help_back"),
     ],
     [
         InlineKeyboardButton(
-            text="💾 SOURCE", callback_data="source_"),
+            text="❲❯❯DEV-INFO❮❮❳", callback_data="source_"),
         InlineKeyboardButton(
-            text="👥 SUPPORT", url="https://t.me/wastebots"
+            text="❲❯❯SUPPORT❮❮❳", url="https://t.me/PRINCESS_SUPPORT"
         ),
     ],
 ]
 
 
 HELP_STRINGS = """
-*『HELP BUTTONS HERE』*"""
+_Hello I Am  [*𓊈𒆜𝙿𝚁𝙸𝙽𝙲𝙴𝚂𝚂𒆜𓊉*](https://media.giphy.com/media/w5MSivCJcmHEQ/giphy.gif)
+༆ HERE IS ALL  BELOW ALL WITH AVAILABLE BUTTUNS WITH MODULES AND CHOOSE WHAT YOU WANT_."""
 
 
-DONATE_STRING = """No need.. I'm rich"""
+DONATE_STRING = """😶No need.. I'm rich"""
 
 IMPORTED = {}
 MIGRATEABLE = []
