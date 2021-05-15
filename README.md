@@ -26,7 +26,7 @@ Hi, I'm PURUSHOTTAM_M 😉, A NOOB, A curiouse student 👨💻 From MAHARASHTRA
 **Current Status**
 
 ## I am Not In Collage Due To COVID19🦠🦟 [💼](https://img.shields.io/badge/-STUDENDT🤓🤓-Pink)
-## I Am Also Owner At [🎓📚 𝐋𝐈𝐁𝐑𝐀𝐑𝐈𝐀𝐍 𝐎𝐅𝐅𝐈𝐂𝐈𝐀𝐋 ✪™ 📚](https://t.me/Channel_Librarian)
+## I Am Also help to students at  [🎓📚 𝐋𝐈𝐁𝐑𝐀𝐑𝐈𝐀𝐍 𝐎𝐅𝐅𝐈𝐂𝐈𝐀𝐋 ✪™ 📚](https://t.me/Channel_Librarian)
 ## Me iz from ![](https://img.shields.io/badge/-Maharashtra😁😁-green)
 
 ## Contact me on telgram 📫 ![PURUSHOTTAM](https://img.shields.io/badge/@Mr_Purushottam-pink)
